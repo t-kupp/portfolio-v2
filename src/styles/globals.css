@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap');
+@import url('https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css');
 
 @tailwind base;
 @tailwind components;
@@ -6,30 +7,22 @@
 
 @layer components {
   .text-header {
-    @apply text-3xl font-extrabold;
+    @apply text-5xl font-extrabold;
   }
   .text-spaced {
-    @apply text-base leading-snug tracking-[0.2rem];
+    @apply text-2xl leading-snug tracking-[0.2rem];
   }
   .text-description {
-    @apply text-xs leading-[1.15] tracking-tight;
+    @apply text-sm leading-[1.15] tracking-tight;
   }
 }
 
 :root {
-  --background: #e2e2e2;
-  --foreground: #595959;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --myLight: #e2e2e2;
+  --myDark: #595959;
+  --myDarker: #222222;
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
   font-family: 'Noto Sans JP', Arial, Helvetica, sans-serif;
 }
