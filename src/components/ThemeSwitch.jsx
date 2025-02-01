@@ -21,24 +21,24 @@ export default function ThemeSwitch() {
   }
 
   return (
-    <div className="text-description absolute right-0 top-0 flex gap-4">
+    <div className="absolute right-0 top-0 flex gap-4 text-sm tracking-tighter">
       <button
         className="flex items-center gap-4 uppercase"
         onClick={toggleTheme}
       >
         <div className="flex items-center">
           {theme === 'dark' ? (
-            <RiCheckboxBlankLine className="mt-[1px]" />
+            <RiCheckboxBlankLine className="mt-[2px]" />
           ) : (
-            <RiCheckboxBlankFill className="mt-[1px]" />
+            <RiCheckboxBlankFill className="mt-[2px]" />
           )}
           Light
         </div>
         <div className="flex items-center">
           {theme === 'light' ? (
-            <RiCheckboxBlankLine className="mt-[1px]" />
+            <RiCheckboxBlankLine className="mt-[2px]" />
           ) : (
-            <RiCheckboxBlankFill className="mt-[1px]" />
+            <RiCheckboxBlankFill className="mt-[2px]" />
           )}
           Dark
         </div>

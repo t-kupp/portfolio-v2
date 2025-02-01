@@ -13,7 +13,7 @@
     @apply text-2xl leading-snug tracking-[0.2rem];
   }
   .text-description {
-    @apply text-sm leading-[1.15] tracking-tight;
+    @apply text-xs leading-[1.15] tracking-tight;
   }
 }
 

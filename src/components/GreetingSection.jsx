@@ -3,7 +3,7 @@ import { FaGithub, FaLinkedin, FaAt } from 'react-icons/fa6';
 export default function AboutSection() {
   return (
     <div className="flex flex-col">
-      <div className="flex flex-col gap-1">
+      <div className="flex flex-col gap-2">
         <div className="text-header">Jan-Thorge Kupper</div>
         <div className="text-spaced">Frontend Developer</div>
         <div className="text-description mb-8 max-w-xs">
