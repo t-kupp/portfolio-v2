@@ -8,6 +8,9 @@ export default {
   darkMode: 'class',
   theme: {
     extend: {
+      fontFamily: {
+        squarefont: 'Squarefont',
+      },
       colors: {
         myLight: 'var(--myLight)',
         myDark: 'var(--myDark)',

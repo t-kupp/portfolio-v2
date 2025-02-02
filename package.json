@@ -24,6 +24,7 @@
     "plugins": [
       "prettier-plugin-tailwindcss"
     ],
-    "singleQuote": true
+    "singleQuote": true,
+    "jsxSingleQuote": true
   }
 }
