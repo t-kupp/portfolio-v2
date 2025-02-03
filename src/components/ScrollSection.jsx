@@ -11,9 +11,7 @@ export default function ScrollSection() {
 function ContactSection() {
   return (
     <div id='contact' className='py-12'>
-      <h1 className='text-spaced mb-2 text-base font-bold'>
-        <span className='font-squarefont'>03. </span>Contact
-      </h1>
+      <h1 className='text-spaced mb-2 text-base'>03. Contact</h1>
 
       <p className='text-description'>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
@@ -42,9 +40,7 @@ function ContactSection() {
 function ExperienceSection() {
   return (
     <div id='experience' className='py-12'>
-      <h1 className='text-spaced mb-2 text-base font-bold'>
-        <span className='font-squarefont'>02. </span>Experience
-      </h1>
+      <h1 className='text-spaced mb-2 text-base'>02. Experience</h1>
 
       <p className='text-description'>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
@@ -73,9 +69,7 @@ function ExperienceSection() {
 function AboutSection() {
   return (
     <div id='about' className='py-12'>
-      <h1 className='text-spaced mb-2 text-base font-bold'>
-        <span className='font-squarefont'>01. </span>About
-      </h1>
+      <h1 className='text-spaced mb-2 text-base'>01. About</h1>
       <p className='text-description'>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
         labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
