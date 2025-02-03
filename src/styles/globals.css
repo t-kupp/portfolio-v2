@@ -37,6 +37,7 @@
 
 body {
   font-family: 'Noto Sans JP', Arial, Helvetica, sans-serif;
+  overscroll-behavior: none;
 }
 
 ::-webkit-scrollbar {
