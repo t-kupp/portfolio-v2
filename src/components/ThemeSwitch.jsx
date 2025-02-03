@@ -5,9 +5,7 @@ export default function ThemeSwitch() {
   const [theme, setTheme] = useState('light');
 
   useEffect(() => {
-    const sysTheme = window.matchMedia('(prefers-color-scheme: dark)').matches
-      ? 'dark'
-      : 'light';
+    const sysTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
     setTheme(sysTheme);
   }, []);
 
@@ -21,11 +19,8 @@ export default function ThemeSwitch() {
   }
 
   return (
-    <div className='fixed bottom-0 left-0 z-50 flex gap-4 p-2 text-sm tracking-tighter'>
-      <button
-        className='flex items-center gap-4 uppercase'
-        onClick={toggleTheme}
-      >
+    <div>
+      <button className='flex items-center gap-4 uppercase' onClick={toggleTheme}>
         <div className='flex items-center'>
           {theme === 'dark' ? (
             <RiCheckboxBlankLine className='mt-[2px]' />

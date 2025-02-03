@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 
 export default function VerticalHeader() {
-  const [activeSection, setActiveSection] = useState(null);
+  const [activeSection, setActiveSection] = useState('about');
 
   useEffect(() => {
     const sections = document.querySelectorAll('#about, #experience, #contact');
@@ -11,12 +11,15 @@ export default function VerticalHeader() {
 
       sections.forEach((section) => {
         const rect = section.getBoundingClientRect();
+
+        // rect.top is the distance from the top of the viewport to the top of the div
+        // window.innerHeight * 0.5 checks if the top of the section is within the upper half of the viewport
         if (rect.top >= 0 && rect.top < window.innerHeight * 0.5) {
           currentSection = section.id;
         }
       });
+
       if (currentSection != null) {
-        console.log('currentSection', currentSection);
         setActiveSection(currentSection);
       }
     };
@@ -29,7 +32,7 @@ export default function VerticalHeader() {
   }, []);
 
   return (
-    <div className='fixed left-0 flex items-center pl-1'>
+    <div className='fixed left-0 z-50 flex items-center pl-1 2xl:pl-2'>
       <ul className='text-spaced flex h-full items-center justify-center text-center text-xs [writing-mode:sideways-lr]'>
         <Link
           number={'03. '}

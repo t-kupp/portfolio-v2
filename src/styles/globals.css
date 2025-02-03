@@ -14,7 +14,7 @@
     @apply text-2xl leading-snug tracking-[0.2rem];
   }
   .text-description {
-    @apply text-xs leading-[1.15] tracking-tight opacity-80;
+    @apply text-xs leading-[1.15] tracking-tight;
   }
   .hover-effect {
     @apply transition-colors duration-300 hover:bg-myDark hover:text-myLight dark:hover:bg-myLight dark:hover:text-myDarker;
@@ -24,9 +24,72 @@
 :root {
   --myLight: #e2e2e2;
   --myDark: #595959;
-  --myDarker: #222222;
+  --myDarker: #131313;
+}
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 body {
   font-family: 'Noto Sans JP', Arial, Helvetica, sans-serif;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.blur-overlay {
+  --maskWidth: 32px;
+
+  backdrop-filter: blur(2px) brightness(90%);
+  -webkit-backdrop-filter: blur(2px) brightness(90%);
+
+  mask-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 1) 0px,
+      rgba(0, 0, 0, 1) var(--maskWidth),
+      rgba(0, 0, 0, 0) var(--maskWidth),
+      rgba(0, 0, 0, 0) calc(100% - var(--maskWidth)),
+      rgba(0, 0, 0, 1) calc(100% - var(--maskWidth)),
+      rgba(0, 0, 0, 1) 100%
+    ),
+    linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 1) 0px,
+      rgba(0, 0, 0, 1) var(--maskWidth),
+      rgba(0, 0, 0, 0) var(--maskWidth),
+      rgba(0, 0, 0, 0) calc(100% - var(--maskWidth)),
+      rgba(0, 0, 0, 1) calc(100% - var(--maskWidth)),
+      rgba(0, 0, 0, 1) 100%
+    );
+
+  -webkit-mask-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 1) 0px,
+      rgba(0, 0, 0, 1) var(--maskWidth),
+      rgba(0, 0, 0, 0) var(--maskWidth),
+      rgba(0, 0, 0, 0) calc(100% - var(--maskWidth)),
+      rgba(0, 0, 0, 1) calc(100% - var(--maskWidth)),
+      rgba(0, 0, 0, 1) 100%
+    ),
+    linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 1) 0px,
+      rgba(0, 0, 0, 1) var(--maskWidth),
+      rgba(0, 0, 0, 0) var(--maskWidth),
+      rgba(0, 0, 0, 0) calc(100% - var(--maskWidth)),
+      rgba(0, 0, 0, 1) calc(100% - var(--maskWidth)),
+      rgba(0, 0, 0, 1) 100%
+    );
+}
+
+@media (width >= 96rem) {
+  .blur-overlay {
+    --maskWidth: 40px;
+  }
 }

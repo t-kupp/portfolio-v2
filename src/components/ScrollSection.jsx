@@ -1,5 +1,3 @@
-import { useEffect } from 'react';
-
 export default function ScrollSection() {
   return (
     <div className='flex w-[50%] flex-col py-24'>
