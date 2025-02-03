@@ -25,6 +25,7 @@
       "prettier-plugin-tailwindcss"
     ],
     "singleQuote": true,
-    "jsxSingleQuote": true
+    "jsxSingleQuote": true,
+    "printWidth": 100
   }
 }

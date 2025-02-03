@@ -14,7 +14,10 @@
     @apply text-2xl leading-snug tracking-[0.2rem];
   }
   .text-description {
-    @apply text-xs leading-[1.15] tracking-tight;
+    @apply text-xs leading-[1.15] tracking-tight opacity-80;
+  }
+  .hover-effect {
+    @apply transition-colors duration-300 hover:bg-myDark hover:text-myLight dark:hover:bg-myLight dark:hover:text-myDarker;
   }
 }
 

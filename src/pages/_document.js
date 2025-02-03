@@ -2,9 +2,9 @@ import { Html, Head, Main, NextScript } from 'next/document';
 
 export default function Document() {
   return (
-    <Html className="scroll-smooth" lang="en">
+    <Html className='scroll-smooth' lang='en'>
       <Head />
-      <body className="uppercase antialiased">
+      <body className='bg-myLight uppercase text-myDark antialiased transition-colors duration-500 dark:bg-myDarker dark:text-myLight'>
         <Main />
         <NextScript />
       </body>
