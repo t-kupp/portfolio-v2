@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 
-export default function VerticalHeader() {
+export default function VerticalBar() {
   const [activeSection, setActiveSection] = useState('about');
 
   useEffect(() => {
@@ -32,8 +32,8 @@ export default function VerticalHeader() {
   }, []);
 
   return (
-    <div className='fixed left-0 z-50 flex items-center pl-1 2xl:pl-2'>
-      <ul className='text-spaced flex h-full items-center justify-center text-center text-xs [writing-mode:sideways-lr]'>
+    <div className='fixed left-0 z-50 flex w-8 items-center justify-center 2xl:w-[40px]'>
+      <ul className='text-description flex h-full items-center justify-center text-center text-sm [writing-mode:sideways-lr]'>
         <Link
           number={'03. '}
           title={'CNT'}
@@ -66,18 +66,22 @@ function Link({ number, title, href, fullTitle, isActive }) {
   const [showFullTitle, setShowFullTitle] = useState(false);
   return (
     <a
-      className={`my-2 flex h-[100px] items-center justify-center gap-1 px-1 py-2 transition-[background-color,height] duration-300 ${isActive ? 'h-[128px] bg-myDark text-myLight dark:bg-myLight dark:text-myDarker' : 'hover-effect hover:h-[128px]'}`}
+      className={`my-2 flex h-[100px] items-center justify-center gap-1 px-[1px] transition-[background-color,height] duration-300 ${isActive ? 'h-[128px] bg-myDark text-myLight dark:bg-myLight dark:text-myDarker' : 'hover-effect hover:h-[128px]'}`}
       href={href}
       onMouseEnter={() => setShowFullTitle(true)}
       onMouseLeave={() => setShowFullTitle(false)}
     >
       <span
-        className={`font-squarefont transition-opacity duration-300 ${showFullTitle || isActive ? 'opacity-0' : 'opacity-100'}`}
+        className={`transition-opacity duration-300 ${showFullTitle || isActive ? 'opacity-0' : 'opacity-100'}`}
       >
-        {!showFullTitle && !isActive && number + title}
+        {!showFullTitle && !isActive && (
+          <>
+            {<span className='text-spaced text-sm'>{number}</span>} {title}
+          </>
+        )}
       </span>
       <span
-        className={`font-semibold transition-opacity duration-300 ${showFullTitle || isActive ? 'opacity-100' : 'opacity-0'}`}
+        className={`transition-opacity duration-300 ${showFullTitle || isActive ? 'opacity-100' : 'opacity-0'}`}
       >
         {(showFullTitle || isActive) && fullTitle}
       </span>

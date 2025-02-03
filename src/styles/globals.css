@@ -14,7 +14,7 @@
     @apply text-2xl leading-snug tracking-[0.2rem];
   }
   .text-description {
-    @apply text-xs leading-[1.15] tracking-tight;
+    @apply text-xs leading-[1.15] tracking-tight text-[#797979] dark:text-[#c2c2c2];
   }
   .hover-effect {
     @apply transition-colors duration-300 hover:bg-myDark hover:text-myLight dark:hover:bg-myLight dark:hover:text-myDarker;
@@ -25,6 +25,8 @@
   --myLight: #e2e2e2;
   --myDark: #595959;
   --myDarker: #131313;
+
+  --rt-opacity: 1 !important;
 }
 
 *,
@@ -47,8 +49,8 @@ body {
 .blur-overlay {
   --maskWidth: 32px;
 
-  backdrop-filter: blur(2px) brightness(90%);
-  -webkit-backdrop-filter: blur(2px) brightness(90%);
+  backdrop-filter: blur(1px) brightness(95%);
+  -webkit-backdrop-filter: blur(1px) brightness(95%);
 
   mask-image: linear-gradient(
       to right,
