@@ -20,7 +20,7 @@ export default function ThemeSwitch() {
 
   return (
     <div>
-      <button className='flex items-center gap-4 uppercase' onClick={toggleTheme}>
+      <button className='flex items-center gap-2 uppercase' onClick={toggleTheme}>
         <div className='flex items-center'>
           {theme === 'dark' ? (
             <RiCheckboxBlankLine className='mt-[2px]' />
