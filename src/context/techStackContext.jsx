@@ -11,17 +11,24 @@ export default function CountProvider({ children }) {
   }, []);
 
   function addTechStack(name, deviconName) {
-    const techStackIcon = { name: name, deviconName: deviconName };
+    const techStackIcon = { id: Date.now(), name: name, deviconName: deviconName };
     const newTechStack = [...techStack, techStackIcon];
-
     setTechStack(newTechStack);
+    updateLocalStorage(newTechStack);
+  }
+
+  function deleteFromStack(id) {
+    const newTechStack = techStack.filter((item) => item.id != id);
+    setTechStack(newTechStack);
+    updateLocalStorage(newTechStack);
+  }
+
+  function updateLocalStorage(newTechStack) {
     localStorage.setItem('techStack', JSON.stringify(newTechStack));
-    console.log('techStackIcon', techStackIcon);
-    console.log('newTechStack', newTechStack);
   }
 
   return (
-    <TechStackContext.Provider value={{ techStack, addTechStack }}>
+    <TechStackContext.Provider value={{ techStack, addTechStack, deleteFromStack }}>
       {children}
     </TechStackContext.Provider>
   );

@@ -6,7 +6,7 @@ import { Tooltip } from 'react-tooltip';
 
 export default function Admin() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
-  const { techStack, addTechStack } = useContext(TechStackContext);
+  const { techStack, addTechStack, deleteFromStack } = useContext(TechStackContext);
   const [techStackName, setTechStackName] = useState('');
   const [deviconName, setDeviconName] = useState('');
 
@@ -23,14 +23,20 @@ export default function Admin() {
           <div>
             <div className='flex flex-col gap-2'>
               <p>Current TechStack:</p>
-              <div className='flex items-center gap-2 text-lg'>
+              <div className='flex items-center gap-4 text-lg'>
                 {techStack.map((item, index) => {
                   return (
-                    <div key={index}>
+                    <div key={index} className='relative'>
                       <i className={item.deviconName}></i>
                       <Tooltip anchorSelect={`.${item.deviconName}`}>
                         <p className='text-xs'>{item.name}</p>
                       </Tooltip>
+                      <button
+                        className='hover-effect absolute right-[-12px] top-0 flex h-3 w-3 items-center justify-center rounded-full border border-myDark text-xs'
+                        onClick={() => deleteFromStack(item.id)}
+                      >
+                        ×
+                      </button>
                     </div>
                   );
                 })}
