@@ -24,7 +24,7 @@ export default function LoginPage({ setIsLoggedIn }) {
             onChange={(e) => setUsername(e.target.value)}
             autoComplete='off'
             type='text'
-            name='username'
+            id='username'
           />
         </div>
         <div className='flex gap-4'>
@@ -38,7 +38,7 @@ export default function LoginPage({ setIsLoggedIn }) {
             }}
             autoComplete='off'
             type='password'
-            name='password'
+            id='password'
           />
         </div>
         <button
