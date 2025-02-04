@@ -49,8 +49,8 @@ body {
 .blur-overlay {
   --maskWidth: 32px;
 
-  backdrop-filter: blur(3px) brightness(80%);
-  -webkit-backdrop-filter: blur(3px) brightness(80%);
+  backdrop-filter: blur(2px) brightness(80%);
+  -webkit-backdrop-filter: blur(2px) brightness(80%);
 
   mask-image: linear-gradient(
       to right,

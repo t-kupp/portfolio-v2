@@ -1,6 +1,5 @@
 import ContactIcons from './ContactIcons';
 import Copyright from './Copyright';
-import ThemeSwitch from './ThemeSwitch';
 
 export default function Footer() {
   return (
