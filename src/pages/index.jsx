@@ -14,7 +14,7 @@ export default function Home() {
       <BackgroundImage />
       <Header />
       <Footer />
-      <div className='mx-auto flex max-w-7xl gap-4 pl-16 pr-12'>
+      <div className='mx-auto flex max-w-7xl flex-col gap-4 px-12 lg:flex-row lg:pl-16 lg:pr-12'>
         <GreetingSection />
         <ScrollSection />
       </div>

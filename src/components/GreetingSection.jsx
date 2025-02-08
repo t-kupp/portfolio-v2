@@ -2,13 +2,13 @@ import TechStack from './TechStack';
 
 export default function GreetingSection() {
   return (
-    <div className='sticky top-0 flex max-h-screen w-[50%] flex-col justify-center'>
+    <div className='flex h-[80vh] flex-col items-center justify-center lg:sticky lg:top-0 lg:h-auto lg:w-[50%] lg:items-baseline'>
       <div className='flex flex-col gap-2'>
         <div className='text-header'>Jan-Thorge Kupper</div>
         <div className='text-spaced'>Frontend Developer</div>
         <div className='text-description mb-8 max-w-xs'>
-          I'm Jan, a Frontend student at Chas Academy in Stockholm, Sweden. I absolutely love what I
-          do and develop my skills every single day.
+          I'm Jan, a Frontend student at Chas Academy in Stockholm, Sweden. I'm learning and gaining
+          new skills everyday and absolutely love what I do.
         </div>
       </div>
       <TechStack />

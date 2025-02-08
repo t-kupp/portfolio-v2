@@ -1,25 +1,13 @@
-import { LiaExternalLinkAltSolid } from 'react-icons/lia';
-import Button from './Button';
-
-export default function ProjectCard({ title, description, hrefImg, hrefLive }) {
+export default function ProjectCard({ title, description, year, href }) {
   return (
-    <a
-      className='group flex max-w-sm flex-col bg-myLight transition-colors dark:bg-myDarker'
-      href={hrefLive}
-      target='_blank'
-    >
-      <h1 className='text-header bg-myDark px-3 py-2 text-sm text-myLight dark:bg-myLight dark:text-myDarker'>
-        {title}
-      </h1>
-      <img className='aspect-4/3' src={hrefImg} alt='' />
-      <div className='p-2'>
-        <p className='text-description mb-4 text-sm'>{description}</p>
-        <button
-          className='border border-myDark px-2 py-1 text-xs font-semibold uppercase transition-colors group-hover:border-myLight group-hover:bg-myDark group-hover:text-myLight'
-          title={'live'}
-        >
-          source
-        </button>
+    <a className='group flex' href={href} target='_blank'>
+      <div className='mr-0 h-12 w-0 border-b-2 border-myDark transition-all duration-200 group-hover:mr-2 group-hover:w-10 dark:border-myLight'></div>
+      <div className='mr-8 transition-all duration-200 group-hover:mr-0'>
+        <div className='mb-2 flex flex-col gap-2 lg:flex-row'>
+          <h1 className='text-spaced text-3xl lg:text-4xl'>{title}</h1>
+          <p className='text-spaced text-base font-light'>/ {year}</p>
+        </div>
+        <p className='text-description'>{description}</p>
       </div>
     </a>
   );

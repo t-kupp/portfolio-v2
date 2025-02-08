@@ -8,13 +8,13 @@
 
 @layer components {
   .text-header {
-    @apply text-5xl font-extrabold;
+    @apply text-3xl font-extrabold tracking-tight lg:text-5xl;
   }
   .text-spaced {
-    @apply text-2xl leading-snug tracking-[0.2rem];
+    @apply text-xl leading-snug tracking-[0.2rem] lg:text-3xl;
   }
   .text-description {
-    @apply text-xs leading-[1.15] tracking-tight text-[#797979] dark:text-[#c2c2c2];
+    @apply text-xs leading-tight tracking-tight text-[#6d6d6d] dark:text-[#c3c3c3] lg:text-sm;
   }
   .hover-effect {
     @apply transition-colors duration-300 hover:bg-myDark hover:text-myLight dark:hover:bg-myLight dark:hover:text-myDarker;
@@ -27,7 +27,7 @@
 
 :root {
   --myLight: #e2e2e2;
-  --myDark: #595959;
+  --myDark: #525252;
   --myDarker: #1c1c1c;
 
   --rt-opacity: 1 !important;

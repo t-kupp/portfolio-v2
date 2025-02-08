@@ -6,7 +6,7 @@ export default function TechStack() {
   const { techStack } = useContext(TechStackContext);
   return (
     <>
-      <div className='mb-24 flex items-center gap-2 text-xl'>
+      <div className='flex items-center gap-2 text-xl'>
         {techStack.map((item, index) => {
           return (
             <div key={index}>
