@@ -7,8 +7,8 @@ export default function GreetingSection() {
         <div className='text-header'>Jan-Thorge Kupper</div>
         <div className='text-spaced'>Frontend Developer</div>
         <div className='text-description mb-8 max-w-xs'>
-          Started with The Odin Project in 2023, now studying full-time at Chas Academy to build
-          dynamic web experiences.
+          I'm Jan, a Frontend student at Chas Academy in Stockholm, Sweden. I absolutely love what I
+          do and develop my skills every single day.
         </div>
       </div>
       <TechStack />

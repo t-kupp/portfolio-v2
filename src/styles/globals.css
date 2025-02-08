@@ -19,6 +19,10 @@
   .hover-effect {
     @apply transition-colors duration-300 hover:bg-myDark hover:text-myLight dark:hover:bg-myLight dark:hover:text-myDarker;
   }
+
+  .grayscale-img {
+    filter: grayscale(100%);
+  }
 }
 
 :root {
@@ -49,8 +53,8 @@ body {
 .blur-overlay {
   --maskWidth: 32px;
 
-  backdrop-filter: blur(2px) brightness(80%);
-  -webkit-backdrop-filter: blur(2px) brightness(80%);
+  backdrop-filter: blur(2px) brightness(90%);
+  -webkit-backdrop-filter: blur(2px) brightness(90%);
 
   mask-image: linear-gradient(
       to right,
