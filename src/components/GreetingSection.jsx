@@ -7,8 +7,8 @@ export default function GreetingSection() {
         <div className='text-header'>Jan-Thorge Kupper</div>
         <div className='text-spaced'>Frontend Developer</div>
         <div className='text-description mb-8 max-w-xs'>
-          I'm Jan, a Frontend student at Chas Academy in Stockholm, Sweden. I absolutely love what I
-          do and I'm learning and gaining new skills everyday.
+          I'm Jan, a Frontend student at Chas Academy in Stockholm, Sweden. I love what I do and I'm
+          learning and gaining new skills everyday.
         </div>
       </div>
       <TechStack />

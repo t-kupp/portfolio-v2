@@ -17,7 +17,7 @@ export default function ScrollSection() {
         </p>
       </Section>
       <Section id={'experience'} title={'02. Experience'}>
-        <div className='flex flex-col gap-10'>
+        <div className='flex flex-col gap-12'>
           {projects.map((project) => {
             return (
               <ProjectCard
