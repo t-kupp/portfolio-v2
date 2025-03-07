@@ -4,7 +4,7 @@ export default function VerticalBar() {
   const [activeSection, setActiveSection] = useState('about');
 
   useEffect(() => {
-    const sections = document.querySelectorAll('#about, #experience, #contact');
+    const sections = document.querySelectorAll('#about, #projects, #contact');
 
     const handleScroll = () => {
       let currentSection = null;
@@ -45,9 +45,9 @@ export default function VerticalBar() {
         <Link
           number={'02. '}
           title={'EXP'}
-          fullTitle={'experience'}
-          href={'#experience'}
-          isActive={activeSection === 'experience'}
+          fullTitle={'projects'}
+          href={'#projects'}
+          isActive={activeSection === 'projects'}
         />
         <Divider />
         <Link

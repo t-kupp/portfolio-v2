@@ -14,7 +14,7 @@
     @apply text-xl leading-snug tracking-[0.2rem] lg:text-3xl;
   }
   .text-description {
-    @apply text-xs leading-tight tracking-tight text-[#6d6d6d] dark:text-[#c3c3c3] lg:text-sm;
+    @apply text-sm leading-tight tracking-tight text-[#6d6d6d] dark:text-[#c3c3c3] lg:text-base;
   }
   .hover-effect {
     @apply transition-colors duration-300 hover:bg-myDark hover:text-myLight dark:hover:bg-myLight dark:hover:text-myDarker;
