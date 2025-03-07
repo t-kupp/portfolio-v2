@@ -9,7 +9,7 @@ import { RiArrowRightUpFill } from 'react-icons/ri';
 export default function ScrollSection() {
   const { projects } = useContext(ProjectContext);
   return (
-    <div className='flex flex-col lg:w-[50%] lg:py-52'>
+    <div className='flex flex-col lg:w-[50%] lg:py-64'>
       <Section id={'about'} title={'About'}>
         <div className='text-description'>
           I'm Jan, a Frontend student at Chas Academy in Stockholm, Sweden.
@@ -35,8 +35,8 @@ export default function ScrollSection() {
         </div>
       </Section>
       <Section id={'contact'} title={'Contact'}>
-        <ContactLink title={'GitHub'} href={''} />
-        <ContactLink title={'LinkedIn'} href={''} />
+        <ContactLink title={'GitHub'} href={'https://github.com/t-kupp'} />
+        <ContactLink title={'LinkedIn'} href={'https://www.linkedin.com/in/jan-thorge-kupper/'} />
       </Section>
     </div>
   );
@@ -44,16 +44,19 @@ export default function ScrollSection() {
 
 function ContactLink({ href, title }) {
   return (
-    <Link className='text-description group mb-1 flex' href={href}>
-      <div className='my-auto mr-1 h-[1px] w-0 bg-myDark transition-[width] duration-300 group-hover:w-3 dark:bg-myLight'></div>
-      {title} <RiArrowRightUpFill size={14} />
+    <Link className='group mb-1 flex' href={href}>
+      <div className='my-auto mr-1 h-[1px] w-0 bg-myDark opacity-80 transition-[width] duration-300 group-hover:w-3 dark:bg-myLight'></div>
+      <span className='text-description group-hover:brightness-75 dark:group-hover:brightness-125'>
+        {title}
+      </span>{' '}
+      <RiArrowRightUpFill size={14} />
     </Link>
   );
 }
 
 function Section({ title, children, id }) {
   return (
-    <div id={id} className='min-h-[55vh] pb-20 lg:min-h-96 lg:py-20'>
+    <div id={id} className='min-h-64 pb-20 lg:min-h-96 lg:py-20'>
       <div className='flex gap-2'>
         <div className='h-7 w-1 bg-myDark'></div>
         <h1 className='text-spaced mb-12 text-lg'>{title}</h1>

@@ -7,7 +7,7 @@ export default function Blinker({ size }) {
 
   return (
     <div
-      className={`${sizeClasses[size] || 'h-3 w-3'} animate-blink bg-myDark group-hover:animate-blinkFast group-hover:bg-myDarker dark:bg-myDark dark:group-hover:bg-myLight`}
+      className={`${sizeClasses[size] || 'h-3 w-3'} animate-blink group-hover:animate-blinkFast bg-myDark dark:bg-myLight`}
     ></div>
   );
 }

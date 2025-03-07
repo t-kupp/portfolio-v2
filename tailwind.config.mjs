@@ -23,13 +23,17 @@ export default {
       },
       keyframes: {
         blink: {
+          '0%, 100%': { opacity: '0.3' },
+          '50%': { opacity: '0' },
+        },
+        blinkFast: {
           '0%, 100%': { opacity: '1' },
           '50%': { opacity: '0' },
         },
       },
       animation: {
         blink: 'blink 1s infinite',
-        blinkFast: 'blink 0.15s infinite',
+        blinkFast: 'blinkFast 0.15s infinite',
       },
     },
   },
