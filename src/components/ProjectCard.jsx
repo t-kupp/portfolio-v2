@@ -39,7 +39,7 @@ export default function ProjectCard({ title, description, year, href }) {
           <Blinker size={'md'} />
         </div>
       </Link>
-      <div className='mb-12 w-screen border-b border-myDark pt-16 opacity-20 dark:opacity-40'></div>
+      <div className='mb-12 border-b border-myDark pt-16 opacity-20 dark:opacity-40'></div>
     </div>
   );
 }

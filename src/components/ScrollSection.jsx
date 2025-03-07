@@ -3,7 +3,6 @@ import { useContext } from 'react';
 import { ProjectContext } from '@/context/projectsContext';
 import TechStack from './TechStack';
 import Link from 'next/link';
-import { GoArrowUpRight } from 'react-icons/go';
 import { RiArrowRightUpFill } from 'react-icons/ri';
 
 export default function ScrollSection() {
@@ -56,7 +55,7 @@ function ContactLink({ href, title }) {
 
 function Section({ title, children, id }) {
   return (
-    <div id={id} className='min-h-64 pb-20 lg:min-h-96 lg:py-20'>
+    <div id={id} className='min-h-64 pb-20 lg:min-h-96 lg:pb-20'>
       <div className='flex gap-2'>
         <div className='h-7 w-1 bg-myDark'></div>
         <h1 className='text-spaced mb-12 text-lg'>{title}</h1>
