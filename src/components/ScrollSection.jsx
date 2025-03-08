@@ -8,7 +8,7 @@ import { RiArrowRightUpFill } from 'react-icons/ri';
 export default function ScrollSection() {
   const { projects } = useContext(ProjectContext);
   return (
-    <div className='flex flex-col lg:w-[50%] lg:py-64'>
+    <div className='z-10 flex flex-col lg:w-[50%] lg:py-64'>
       <Section id={'about'} title={'About'}>
         <div className='text-description'>
           I'm Jan, a Frontend student at Chas Academy in Stockholm, Sweden.
@@ -21,9 +21,10 @@ export default function ScrollSection() {
       </Section>
       <Section id={'projects'} title={'Projects'}>
         <div className='flex flex-col'>
-          {projects.map((project) => {
+          {projects.map((project, index) => {
             return (
               <ProjectCard
+                key={index}
                 title={project.title}
                 year={project.year}
                 description={project.description}
