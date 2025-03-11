@@ -10,7 +10,7 @@ export default function ProjectProvider({ children }) {
       description:
         'A ChatGPT clone I built with Googles Gemini 1.5 Flash as part of a group project.',
       year: '2025',
-      href: '',
+      href: 'https://chas-chasgpt.vercel.app/',
     },
     {
       id: 1,
