@@ -5,12 +5,20 @@ export const ProjectContext = createContext();
 export default function ProjectProvider({ children }) {
   const initialProjects = [
     {
-      id: 0,
+      id: 3,
       title: 'ChasGPT',
       description:
         'A ChatGPT clone I built with Googles Gemini 1.5 Flash as part of a group project.',
       year: '2025',
       href: 'https://chas-chasgpt.vercel.app/',
+    },
+    {
+      id: 2,
+      title: 'MediaDB',
+      description:
+        'A database for popular movies and tv shows with a search and watchlist function.',
+      year: '2025',
+      href: 'https://chas-media-db.vercel.app/',
     },
     {
       id: 1,
@@ -21,7 +29,7 @@ export default function ProjectProvider({ children }) {
       href: 'https://t-kupp.github.io/odin-weather-app/',
     },
     {
-      id: 2,
+      id: 0,
       title: 'AOT Randomizer',
       description: 'A team randomizer for the video game Across the Obelisk.',
       year: '2024',
