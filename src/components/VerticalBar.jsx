@@ -28,8 +28,8 @@ export default function VerticalBar() {
   }, []);
 
   return (
-    <div className='fixed left-0 z-30 hidden w-8 items-center justify-center lg:flex 2xl:w-[40px]'>
-      <ul className='text-description flex h-full items-center justify-center text-center text-sm [writing-mode:sideways-lr]'>
+    <div className='fixed left-0 z-50 hidden w-8 items-center justify-center lg:flex 2xl:w-[40px]'>
+      <ul className='text-description flex h-full items-center justify-center text-center text-sm !opacity-100 [writing-mode:sideways-lr]'>
         <Link
           number={'03. '}
           title={'CNT'}
