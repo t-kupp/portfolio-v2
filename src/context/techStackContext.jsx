@@ -35,6 +35,11 @@ export default function TechStackProvider({ children }) {
       name: 'tailwind',
       deviconName: 'devicon-tailwindcss-original',
     },
+    {
+      id: 6,
+      name: 'three.js',
+      deviconName: 'devicon-threejs-original',
+    },
   ];
   const [techStack, setTechStack] = useState([]);
 

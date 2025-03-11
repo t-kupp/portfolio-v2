@@ -3,7 +3,7 @@ export default function GreetingSection() {
     <div className='flex flex-col justify-center py-64 lg:sticky lg:top-0 lg:h-screen lg:w-[50%] 2xl:py-10'>
       <div className='flex flex-col gap-2'>
         <div className='text-header text-4xl'>Jan-Thorge Kupper</div>
-        <div className='text-description text-lg'>Frontend Developer</div>
+        <div className='text-description text-lg'>Web Developer</div>
       </div>
     </div>
   );
