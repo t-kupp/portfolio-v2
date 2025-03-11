@@ -4,27 +4,23 @@ export default function VerticalBar() {
   const [activeSection, setActiveSection] = useState('about');
 
   useEffect(() => {
-    const sections = document.querySelectorAll('#about, #projects, #contact');
-
     const handleScroll = () => {
-      let currentSection = null;
+      const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const scrollTop = window.scrollY;
+      const scrollPercentage = (scrollTop / scrollHeight) * 100;
 
-      sections.forEach((section) => {
-        const rect = section.getBoundingClientRect();
-
-        // rect.top is the distance from the top of the viewport to the top of the div
-        // window.innerHeight * 0.5 checks if the top of the section is within the upper half of the viewport
-        if (rect.top >= 0 && rect.top < window.innerHeight * 0.5) {
-          currentSection = section.id;
-        }
-      });
-
-      if (currentSection != null) {
-        setActiveSection(currentSection);
+      if (scrollPercentage >= 0 && scrollPercentage < 10) {
+        setActiveSection('about');
+      } else if (scrollPercentage >= 10 && scrollPercentage < 90) {
+        setActiveSection('projects');
+      } else if (scrollPercentage >= 90) {
+        setActiveSection('contact');
       }
     };
 
     window.addEventListener('scroll', handleScroll);
+
+    handleScroll();
 
     return () => {
       window.removeEventListener('scroll', handleScroll);
@@ -32,7 +28,7 @@ export default function VerticalBar() {
   }, []);
 
   return (
-    <div className='fixed left-0 z-50 flex w-8 items-center justify-center 2xl:w-[40px]'>
+    <div className='fixed left-0 z-30 hidden w-8 items-center justify-center lg:flex 2xl:w-[40px]'>
       <ul className='text-description flex h-full items-center justify-center text-center text-sm [writing-mode:sideways-lr]'>
         <Link
           number={'03. '}

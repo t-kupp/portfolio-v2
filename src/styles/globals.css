@@ -8,18 +8,18 @@
 
 @layer components {
   .text-header {
-    @apply text-3xl font-extrabold tracking-tight lg:text-5xl;
+    @apply text-2xl font-extrabold tracking-tight lg:text-4xl;
   }
   .text-spaced {
-    @apply text-xl leading-snug tracking-[0.2rem] lg:text-3xl;
+    @apply text-lg leading-snug tracking-[0.2rem] lg:text-2xl;
   }
   .text-description {
-    @apply text-sm leading-tight tracking-tight text-[#6d6d6d] dark:text-[#c3c3c3] lg:text-base;
+    @apply text-xs leading-tight tracking-tight opacity-80 dark:opacity-70 lg:text-base;
   }
   .hover-effect {
     @apply transition-colors duration-300 hover:bg-myDark hover:text-myLight dark:hover:bg-myLight dark:hover:text-myDarker;
   }
-
+  /* text-[#6d6d6d] dark:text-[#c3c3c3] */
   .grayscale-img {
     filter: grayscale(100%);
   }
@@ -60,7 +60,7 @@ body {
 }
 
 .blur-overlay {
-  --maskWidth: 32px;
+  --maskWidth: 20px;
 
   backdrop-filter: blur(2px) brightness(90%);
   -webkit-backdrop-filter: blur(2px) brightness(90%);
@@ -104,7 +104,7 @@ body {
     );
 }
 
-@media (width >= 96rem) {
+@media (width >= 64rem) {
   .blur-overlay {
     --maskWidth: 40px;
   }

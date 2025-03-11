@@ -17,29 +17,28 @@ export default function ProjectCard({ title, description, year, href }) {
   return (
     <div className=''>
       <Link
-        className='group flex min-h-40 max-w-2xl lg:min-h-28'
+        className='group flex min-h-32 max-w-2xl lg:min-h-28'
         href={href}
         target='_blank'
         onMouseEnter={handleHover}
       >
         <div className='mr-12 w-full duration-200'>
-          <div className='mb-4 flex flex-col gap-2 lg:flex-row'>
+          <div className='mb-4 flex flex-col lg:flex-row lg:gap-2'>
             <h1 className='text-header lg:text-nowrap'>
               <Scramble text={title} replay={(fn) => (titleReplayRef.current = fn)} />
             </h1>
-            <p className='text-spaced pt-2 text-base font-light'>/ {year}</p>
+            <p className='text-spaced pt-1 text-sm font-light lg:pt-2 lg:text-base'>/ {year}</p>
           </div>
-          <p className='text-description text-sm'>
+          <p className='text-description'>
             <Scramble text={description} replay={(fn) => (descriptionReplayRef.current = fn)} />
           </p>
         </div>
-        <div className='flex flex-col gap-2 pt-1'>
+        {/* <div className='flex flex-col gap-2 pt-1'>
           <Box size={'md'} />
           <Box size={'md'} />
           <Blinker size={'md'} />
-        </div>
+        </div> */}
       </Link>
-      <div className='mb-12 border-b border-myDark pt-16 opacity-20 dark:opacity-40'></div>
     </div>
   );
 }

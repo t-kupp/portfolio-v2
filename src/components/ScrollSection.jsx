@@ -8,7 +8,7 @@ import { RiArrowRightUpFill } from 'react-icons/ri';
 export default function ScrollSection() {
   const { projects } = useContext(ProjectContext);
   return (
-    <div className='z-10 flex flex-col lg:w-[50%] lg:py-64'>
+    <div className='z-10 flex flex-col gap-8 pb-24 pt-12 lg:w-[50%] lg:gap-16'>
       <Section id={'about'} title={'About'}>
         <div className='text-description'>
           I'm Jan, a Frontend student at Chas Academy in Stockholm, Sweden.
@@ -20,7 +20,7 @@ export default function ScrollSection() {
         <TechStack />
       </Section>
       <Section id={'projects'} title={'Projects'}>
-        <div className='flex flex-col'>
+        <div className='flex flex-col gap-6 lg:gap-12'>
           {projects.map((project, index) => {
             return (
               <ProjectCard
@@ -48,7 +48,7 @@ function ContactLink({ href, title }) {
       <div className='my-auto mr-1 h-[1px] w-0 bg-myDark opacity-80 transition-[width] duration-300 group-hover:w-3 dark:bg-myLight'></div>
       <span className='text-description group-hover:brightness-75 dark:group-hover:brightness-125'>
         {title}
-      </span>{' '}
+      </span>
       <RiArrowRightUpFill size={14} />
     </Link>
   );
@@ -56,10 +56,10 @@ function ContactLink({ href, title }) {
 
 function Section({ title, children, id }) {
   return (
-    <div id={id} className='min-h-64 pb-20 lg:min-h-96 lg:pb-20'>
-      <div className='flex gap-2'>
-        <div className='h-7 w-1 bg-myDark'></div>
-        <h1 className='text-spaced mb-12 text-lg'>{title}</h1>
+    <div id={id} className=''>
+      <div className='mb-6 flex flex-col gap-2 pt-12 lg:mb-12'>
+        <h1 className='text-spaced'>{title}</h1>
+        <div className='border-b border-myDark opacity-20 dark:opacity-40'></div>
       </div>
       {children}
     </div>
