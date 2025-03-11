@@ -6,7 +6,7 @@ import { useRef, useEffect, useState, useContext } from 'react';
 import { MathUtils } from 'three';
 
 const rows = 100;
-const columns = 100;
+const columns = 20;
 
 const particles = Array.from({ length: rows * columns }, (_, index) => ({
   factor: MathUtils.randInt(20, 100),
@@ -35,8 +35,8 @@ export default function DotPlain() {
   }, []);
 
   return (
-    <div className='fixed h-screen w-screen p-10'>
-      <Canvas camera={{ position: [0, 0, 60], fov: 50 }}>
+    <div className='fixed h-screen w-screen p-10 opacity-25'>
+      <Canvas camera={{ position: [0, 0, 52], fov: 50 }}>
         <color attach='background' args={theme == 'light' ? ['#e2e2e2'] : ['#1c1c1c']} />
         <Dots mouse={mouse} />
         <EffectComposer>

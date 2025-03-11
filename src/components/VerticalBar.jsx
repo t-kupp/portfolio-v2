@@ -44,7 +44,7 @@ export default function VerticalBar() {
         <Divider />
         <Link
           number={'02. '}
-          title={'EXP'}
+          title={'PRO'}
           fullTitle={'projects'}
           href={'#projects'}
           isActive={activeSection === 'projects'}
