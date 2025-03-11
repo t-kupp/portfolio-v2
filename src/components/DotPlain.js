@@ -79,7 +79,7 @@ function Dots({ mouse }) {
 
   return (
     <Instances ref={ref} limit={particles.length}>
-      <sphereGeometry args={[1, 64, 64]} />
+      <sphereGeometry args={[1, 8, 8]} />
       <meshBasicMaterial color={theme === 'light' ? '#525252' : '#e2e2e2'} roughness={1} />
       {particles.map((particle, index) => (
         <Instance
