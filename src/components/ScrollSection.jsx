@@ -30,7 +30,7 @@ export default function ScrollSection() {
         <TechStack />
       </Section>
       <Section id={'projects'} title={'Projects'}>
-        <div className='flex flex-col gap-6 lg:gap-0'>
+        <div className='my-[-24px] flex flex-col gap-6 lg:gap-0'>
           {projects.map((project, index) => {
             const isHovered = hoveredProject === 'project-' + project.id;
             return (

@@ -6,10 +6,12 @@ import Footer from '@/components/Footer';
 import Header from '@/components/Header';
 import BackgroundImage from '@/components/BackgroundImage';
 import DotPlain from '@/components/DotPlain';
+import LoadingScreen from '@/components/LoadingScreen';
 
 export default function Home() {
   return (
     <>
+      <LoadingScreen />
       <VerticalBar />
       <Frame />
       {/* <BackgroundImage /> */}
