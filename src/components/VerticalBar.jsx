@@ -9,11 +9,11 @@ export default function VerticalBar() {
       const scrollTop = window.scrollY;
       const scrollPercentage = (scrollTop / scrollHeight) * 100;
 
-      if (scrollPercentage >= 0 && scrollPercentage < 10) {
+      if (scrollPercentage >= 0 && scrollPercentage < 20) {
         setActiveSection('about');
-      } else if (scrollPercentage >= 10 && scrollPercentage < 90) {
+      } else if (scrollPercentage >= 20 && scrollPercentage < 80) {
         setActiveSection('projects');
-      } else if (scrollPercentage >= 90) {
+      } else if (scrollPercentage >= 80) {
         setActiveSection('contact');
       }
     };
@@ -28,7 +28,7 @@ export default function VerticalBar() {
   }, []);
 
   return (
-    <div className='fixed left-0 z-50 hidden w-8 items-center justify-center lg:flex 2xl:w-[40px]'>
+    <div className='fixed left-0 z-50 hidden w-8 items-center justify-center lg:flex lg:w-[40px]'>
       <ul className='text-description flex h-full items-center justify-center text-center text-sm !opacity-100 [writing-mode:sideways-lr]'>
         <Link
           number={'03. '}

@@ -1,5 +1,5 @@
 import ProjectCard from './ProjectCard';
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
 import { ProjectContext } from '@/context/projectsContext';
 import TechStack from './TechStack';
 import Link from 'next/link';
@@ -7,6 +7,16 @@ import { RiArrowRightUpFill } from 'react-icons/ri';
 
 export default function ScrollSection() {
   const { projects } = useContext(ProjectContext);
+  const [hoveredProject, setHoveredProject] = useState(null);
+
+  function handleEnter(e) {
+    setHoveredProject(e.currentTarget.id);
+  }
+
+  function handleLeave() {
+    setHoveredProject(null);
+  }
+
   return (
     <div className='z-10 flex flex-col gap-8 pb-24 pt-12 lg:w-[50%] lg:gap-16'>
       <Section id={'about'} title={'About'}>
@@ -14,22 +24,25 @@ export default function ScrollSection() {
           I'm Jan, a Frontend student at Chas Academy in Stockholm, Sweden.
           <br />I love what I do and I'm learning and gaining new skills everyday.
           <br /> <br />
-          These are some of the technologies I'm working with:
+          These are some of the technologies I work with:
           <br /> <br />
         </div>
         <TechStack />
       </Section>
       <Section id={'projects'} title={'Projects'}>
-        <div className='flex flex-col gap-6 lg:gap-12'>
+        <div className='flex flex-col gap-6 lg:gap-0'>
           {projects.map((project, index) => {
+            const isHovered = hoveredProject === 'project-' + project.id;
             return (
-              <ProjectCard
+              <div
+                id={'project-' + project.id}
                 key={index}
-                title={project.title}
-                year={project.year}
-                description={project.description}
-                href={project.href}
-              />
+                onMouseEnter={handleEnter}
+                onMouseLeave={handleLeave}
+                className={`${isHovered || hoveredProject === null ? 'lg:opacity-100' : 'lg:opacity-30'} transition-opacity duration-300`}
+              >
+                <ProjectCard project={project} />
+              </div>
             );
           })}
         </div>
@@ -57,7 +70,7 @@ function ContactLink({ href, title }) {
 function Section({ title, children, id }) {
   return (
     <div id={id} className=''>
-      <div className='mb-6 flex flex-col gap-2 pt-12 lg:mb-12'>
+      <div className='mb-6 flex flex-col gap-2 pt-12 lg:mb-8'>
         <h1 className='text-spaced'>{title}</h1>
         <div className='border-b border-myDark opacity-20 dark:opacity-40'></div>
       </div>

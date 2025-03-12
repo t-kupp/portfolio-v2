@@ -28,7 +28,7 @@ export default function ThemeSwitch() {
   return (
     <div>
       <button
-        className='text-description flex items-center gap-2 text-sm uppercase !opacity-100'
+        className='text-description flex items-center gap-2 uppercase !opacity-100'
         onClick={toggleTheme}
       >
         <div className='flex items-center'>

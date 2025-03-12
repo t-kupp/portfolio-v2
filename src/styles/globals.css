@@ -14,7 +14,7 @@
     @apply text-lg leading-snug tracking-[0.2rem] lg:text-2xl;
   }
   .text-description {
-    @apply text-xs leading-tight tracking-tight opacity-80 dark:opacity-70 lg:text-base;
+    @apply text-xs leading-tight tracking-tight opacity-90 dark:opacity-80 lg:text-base;
   }
   .hover-effect {
     @apply transition-colors duration-300 hover:bg-myDark hover:text-myLight dark:hover:bg-myLight dark:hover:text-myDarker;
@@ -27,8 +27,8 @@
 
 :root {
   --myLight: #e2e2e2;
-  --myDark: #525252;
-  --myDarker: #1c1c1c;
+  --myDark: #3a3a3a;
+  --myDarker: #121212;
 
   --rt-opacity: 1 !important;
 }
