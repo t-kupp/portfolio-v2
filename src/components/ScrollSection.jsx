@@ -18,7 +18,7 @@ export default function ScrollSection() {
   }
 
   return (
-    <div className='z-10 flex flex-col gap-8 pb-24 pt-12 lg:w-[50%] lg:gap-16'>
+    <div className='z-10 flex flex-col gap-24 pb-36 pt-12 lg:w-[50%] lg:gap-16 lg:pb-24'>
       <Section id={'about'} title={'About'}>
         <div className='text-description'>
           I'm Jan, a Frontend student at Chas Academy in Stockholm, Sweden.

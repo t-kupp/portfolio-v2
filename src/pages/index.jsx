@@ -12,7 +12,7 @@ export default function Home() {
   return (
     <>
       <LoadingScreen />
-      <VerticalBar />
+      {/* <VerticalBar /> */}
       <Frame />
       {/* <BackgroundImage /> */}
       <Header />
