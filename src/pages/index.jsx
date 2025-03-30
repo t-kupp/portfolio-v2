@@ -16,9 +16,9 @@ export default function Home() {
       <Frame />
       {/* <BackgroundImage /> */}
       <Header />
-      <Footer />
+      {/* <Footer /> */}
       <DotPlain />
-      <div className='mx-auto flex max-w-7xl flex-col gap-12 px-10 lg:flex-row lg:px-20 lg:py-0 2xl:px-14'>
+      <div className='mx-auto flex max-w-7xl flex-col gap-0 px-10 lg:flex-row lg:px-20 lg:py-0 2xl:px-14'>
         <GreetingSection />
         <ScrollSection />
       </div>

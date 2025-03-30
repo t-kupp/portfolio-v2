@@ -1,12 +1,12 @@
 import { ThemeContext } from '@/context/themeContext';
 import { Instance, Instances, OrbitControls } from '@react-three/drei';
 import { Canvas, useFrame } from '@react-three/fiber';
-import { Noise, EffectComposer, Scanline } from '@react-three/postprocessing';
+import { Noise, EffectComposer } from '@react-three/postprocessing';
 import { useRef, useEffect, useContext } from 'react';
 import { MathUtils } from 'three';
 
-const rows = 50;
-const columns = 50;
+const rows = 25;
+const columns = 30;
 
 const particles = Array.from({ length: rows * columns }, (_, index) => ({
   factor: MathUtils.randInt(20, 100),
@@ -36,14 +36,10 @@ export default function DotPlain() {
 
   return (
     <div className='fixed h-screen w-screen p-5 opacity-20 dark:opacity-15 lg:p-10'>
-      <Canvas camera={{ position: [0, 0, 30], fov: 50 }}>
+      <Canvas camera={{ position: [0, 0, 15], fov: 50 }}>
         <color attach='background' args={theme == 'light' ? ['#e2e2e2'] : ['#1c1c1c']} />
         <Dots mouse={mouse} />
-        <EffectComposer>
-          {/* <TiltShift2 blur={0.05} /> */}
-          <Noise opacity={0.05} />
-          <Scanline density={1.5} opacity={0.3} />
-        </EffectComposer>
+        <EffectComposer></EffectComposer>
       </Canvas>
     </div>
   );
@@ -56,13 +52,13 @@ function Dots({ mouse }) {
   useFrame((state, delta) => {
     ref.current.rotation.y = MathUtils.damp(
       ref.current.rotation.y,
-      mouse.current.x * 0.03,
+      mouse.current.x * 0.05,
       4,
       delta,
     );
     ref.current.rotation.x = MathUtils.damp(
       ref.current.rotation.x,
-      -mouse.current.y * 0.03,
+      -mouse.current.y * 0.05,
       4,
       delta,
     );
@@ -81,7 +77,7 @@ function Dots({ mouse }) {
 
   return (
     <Instances ref={ref} limit={particles.length}>
-      <sphereGeometry args={[1, 8, 8]} />
+      <sphereGeometry args={[1, 6, 6]} />
       <meshBasicMaterial color={theme === 'light' ? '#525252' : '#e2e2e2'} roughness={1} />
       {particles.map((particle, index) => (
         <Instance

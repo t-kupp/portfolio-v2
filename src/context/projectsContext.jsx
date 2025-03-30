@@ -8,7 +8,7 @@ export default function ProjectProvider({ children }) {
       id: 3,
       title: 'ChasGPT',
       description:
-        'A ChatGPT clone I built with Googles Gemini 1.5 Flash as part of a group project.',
+        "An AI-driven chatbot modeled after ChatGPT, using Google's Gemini AI. I learned how to integrate an AI API for real-time interaction.",
       year: '2025',
       href: 'https://chas-chasgpt.vercel.app/',
     },
@@ -16,7 +16,7 @@ export default function ProjectProvider({ children }) {
       id: 2,
       title: 'MediaDB',
       description:
-        'A database for popular movies and tv shows with a search and watchlist function.',
+        'Developed a database for movies and TV series with search and tracking features. This project taught me how to use dynamic routing and improved my understanding of website architecture.',
       year: '2025',
       href: 'https://chas-media-db.vercel.app/',
     },
@@ -24,7 +24,7 @@ export default function ProjectProvider({ children }) {
       id: 1,
       title: 'Weather App',
       description:
-        'A weather app that displays the current weather and a 7-day forecast for any place on earth.',
+        'Created a web app to search for locations worldwide and display real-time weather along with a 7-day forecast. Built entirely with vanilla HTML, CSS, and JavaScript, focusing on fundamental web development principles before transitioning to frameworks and libraries.',
       year: '2024',
       href: 'https://t-kupp.github.io/odin-weather-app/',
     },

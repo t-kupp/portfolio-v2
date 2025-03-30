@@ -28,16 +28,16 @@ export default function ThemeSwitch() {
   return (
     <div>
       <button
-        className='text-description flex items-center gap-2 uppercase !opacity-100'
+        className='text-description flex items-center gap-2 font-mono uppercase !opacity-100'
         onClick={toggleTheme}
       >
-        <div className='flex items-center'>
-          {appliedTheme === 'dark' ? '□' : '■'}
-          Light
+        <div className='flex items-center gap-0.5'>
+          <p>{appliedTheme === 'dark' ? '□' : '■'}</p>
+          <p>Light</p>
         </div>
-        <div className='flex items-center'>
-          {appliedTheme === 'light' ? '□' : '■'}
-          Dark
+        <div className='flex items-center gap-0.5'>
+          <p>{appliedTheme === 'light' ? '□' : '■'}</p>
+          <p>Dark</p>
         </div>
       </button>
     </div>

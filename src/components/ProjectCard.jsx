@@ -1,6 +1,4 @@
-import Blinker from './Blinker';
-import Box from './Box';
-
+import { RiArrowRightUpFill } from 'react-icons/ri';
 import Link from 'next/link';
 
 export default function ProjectCard({ project }) {
@@ -11,12 +9,11 @@ export default function ProjectCard({ project }) {
       href={project.href}
       target='_blank'
     >
-      <div className='mr-12 w-full duration-200'>
-        <div className='mb-4 flex flex-col lg:flex-row lg:gap-2'>
+      <div className='w-full duration-200'>
+        <div className='mb-4 flex flex-row gap-1 lg:gap-2'>
           <h1 className='text-header lg:text-nowrap'>{project.title}</h1>
-          <p className='text-spaced pt-1 text-sm font-light lg:pt-2 lg:text-base'>
-            / {project.year}
-          </p>
+          <RiArrowRightUpFill size={20} className='pt-1' />
+          <p className='text-spaced pt-1 text-sm font-light lg:text-base'>/{project.year}</p>
         </div>
         <p className='text-description'>{project.description}</p>
       </div>

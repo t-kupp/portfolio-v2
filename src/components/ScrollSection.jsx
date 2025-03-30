@@ -30,7 +30,7 @@ export default function ScrollSection() {
         <TechStack />
       </Section>
       <Section id={'projects'} title={'Projects'}>
-        <div className='my-[-24px] flex flex-col gap-6 lg:gap-0'>
+        <div className='mb-[-24px] mt-[-6px] flex flex-col gap-6 lg:mt-[-16px] lg:gap-0'>
           {projects.map((project, index) => {
             const isHovered = hoveredProject === 'project-' + project.id;
             return (
@@ -39,7 +39,7 @@ export default function ScrollSection() {
                 key={index}
                 onMouseEnter={handleEnter}
                 onMouseLeave={handleLeave}
-                className={`${isHovered || hoveredProject === null ? 'lg:opacity-100' : 'lg:opacity-30'} transition-opacity duration-300`}
+                className={`${isHovered || hoveredProject === null ? 'lg:opacity-100' : 'lg:opacity-50'} transition-opacity duration-300`}
               >
                 <ProjectCard project={project} />
               </div>
@@ -57,9 +57,9 @@ export default function ScrollSection() {
 
 function ContactLink({ href, title }) {
   return (
-    <Link className='group mb-1 flex' href={href}>
-      <div className='my-auto mr-1 h-[1px] w-0 bg-myDark opacity-80 transition-[width] duration-300 group-hover:w-3 dark:bg-myLight'></div>
-      <span className='text-description group-hover:brightness-75 dark:group-hover:brightness-125'>
+    <Link className='mb-1 flex' href={href}>
+      <div className='my-auto mr-1 h-[1px] w-0 bg-myDark opacity-80 transition-[width] duration-300 dark:bg-myLight'></div>
+      <span className='text-description hover:brightness-75 dark:hover:brightness-125'>
         {title}
       </span>
       <RiArrowRightUpFill size={14} />

@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap');
 @import url('https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css');
 @import url('https://fonts.cdnfonts.com/css/squarefont');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -14,7 +15,7 @@
     @apply text-lg leading-snug tracking-[0.2rem] lg:text-2xl;
   }
   .text-description {
-    @apply text-xs leading-tight tracking-tight opacity-90 dark:opacity-80 lg:text-base;
+    @apply text-xs leading-tight tracking-normal opacity-90 dark:opacity-80 lg:text-base;
   }
   .hover-effect {
     @apply transition-colors duration-300 hover:bg-myDark hover:text-myLight dark:hover:bg-myLight dark:hover:text-myDarker;
@@ -42,7 +43,7 @@
 }
 
 body {
-  font-family: 'Noto Sans JP', Arial, Helvetica, sans-serif;
+  font-family: 'IBM Plex Sans', sans-serif;
   overscroll-behavior: none;
 }
 
