@@ -5,6 +5,14 @@ export const ProjectContext = createContext();
 export default function ProjectProvider({ children }) {
   const initialProjects = [
     {
+      id: 4,
+      title: 'Big Stacks',
+      description:
+        'An online banking application prototype developed using Next.js App Router for both frontend and backend, with Supabase for database management. It includes features such as account creation, money transfers, token verification, and real-time balance tracking, as well as a visual history of balance changes. I gained experience in handling HTTP requests for frontend-backend communication and utilizing PostgreSQL queries for database data handling.',
+      year: '2025',
+      href: 'https://chas-banking-site.vercel.app/',
+    },
+    {
       id: 3,
       title: 'ChasGPT',
       description:
