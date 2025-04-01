@@ -35,7 +35,7 @@ export default function DotPlain() {
   }, []);
 
   return (
-    <div className='fixed h-screen w-screen p-5 opacity-20 dark:opacity-15 lg:p-10'>
+    <div className='fixed h-screen w-screen p-5 opacity-15 dark:opacity-15 lg:p-10'>
       <Canvas camera={{ position: [0, 0, 15], fov: 50 }}>
         <color attach='background' args={theme == 'light' ? ['#e2e2e2'] : ['#1c1c1c']} />
         <Dots mouse={mouse} />

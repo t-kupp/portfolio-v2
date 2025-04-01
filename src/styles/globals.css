@@ -12,10 +12,10 @@
     @apply text-2xl font-extrabold tracking-tight lg:text-4xl;
   }
   .text-spaced {
-    @apply text-lg leading-snug tracking-[0.2rem] lg:text-2xl;
+    @apply text-lg font-medium leading-snug tracking-[0.2rem] lg:text-2xl;
   }
   .text-description {
-    @apply text-xs leading-tight tracking-normal opacity-90 dark:opacity-80 lg:text-base;
+    @apply text-sm opacity-90 dark:opacity-85 lg:text-base;
   }
   .hover-effect {
     @apply transition-colors duration-300 hover:bg-myDark hover:text-myLight dark:hover:bg-myLight dark:hover:text-myDarker;
